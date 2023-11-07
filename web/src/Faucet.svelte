@@ -127,7 +127,7 @@
               <span class="icon">
                 <i class="fa fa-bath" />
               </span>
-              <span><b>{faucetInfo.symbol} Faucet</b></span>
+              <span><b>Ember {faucetInfo.symbol} Faucet</b></span>
             </a>
           </div>
           <div id="navbarMenu" class="navbar-menu">
@@ -135,7 +135,8 @@
               <span class="navbar-item">
                 <a
                   class="button is-white is-outlined"
-                  href="https://github.com/chainflag/eth-faucet"
+                  href="https://github.com/AnomalyFi/eth-faucet"
+                  target="_blank"
                 >
                   <span class="icon">
                     <i class="fa fa-github" />
@@ -167,7 +168,7 @@
                   bind:value={input}
                   class="input is-rounded"
                   type="text"
-                  placeholder="Enter your address or ENS name"
+                  placeholder="Enter your address"
                 />
               </p>
               <p class="control">
@@ -188,19 +189,26 @@
 
 <style>
   .hero.is-info {
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('/background.jpg') no-repeat center center fixed;
+    background: black url('/backnew.jpg') no-repeat fixed center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
+
+  .hero.is-info a.navbar-item:hover {
+    background-color: transparent;
+  }
+
   .hero .subtitle {
     padding: 3rem 0;
     line-height: 1.5;
   }
   .box {
-    border-radius: 19px;
+    border-radius: 0;
+    background: transparent;
+  }
+  .button {
+    border-radius: 0;
   }
 </style>
