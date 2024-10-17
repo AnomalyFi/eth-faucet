@@ -127,7 +127,7 @@
               <span class="icon">
                 <i class="fa fa-bath" />
               </span>
-              <span><b>Ember {faucetInfo.symbol} Faucet</b></span>
+              <span><b>{faucetInfo.network} {faucetInfo.symbol} Faucet</b></span>
             </a>
           </div>
           <div id="navbarMenu" class="navbar-menu">

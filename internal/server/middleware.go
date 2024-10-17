@@ -50,14 +50,14 @@ func (l *Limiter) ServeHTTP(w http.ResponseWriter, r *http.Request, next http.Ha
 	}
 
 	clintIP := getClientIPFromRequest(l.proxyCount, r)
-	l.mutex.Lock()
-	if l.limitByKey(w, address) || l.limitByKey(w, clintIP) {
-		l.mutex.Unlock()
-		return
-	}
-	l.cache.SetWithTTL(address, true, l.ttl)
-	l.cache.SetWithTTL(clintIP, true, l.ttl)
-	l.mutex.Unlock()
+	// l.mutex.Lock()
+	// if l.limitByKey(w, address) || l.limitByKey(w, clintIP) {
+	// 	l.mutex.Unlock()
+	// 	return
+	// }
+	// l.cache.SetWithTTL(address, true, l.ttl)
+	// l.cache.SetWithTTL(clintIP, true, l.ttl)
+	// l.mutex.Unlock()
 
 	next.ServeHTTP(w, r)
 	if w.(negroni.ResponseWriter).Status() != http.StatusOK {
